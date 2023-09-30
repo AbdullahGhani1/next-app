@@ -29,13 +29,26 @@ const page = async () => {
   return (
     <>
       <h1>Users</h1>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            <Link href={`/users/${user.id}`}>{user.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <table className="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>
+                <Link href={`/users/${user.id}`}>{user.name}</Link>
+              </td>
+              <td>
+                <Link href={`/users/${user.id}`}>{user.email}</Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };
