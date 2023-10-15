@@ -10,6 +10,7 @@ const page = ({ searchParams: { sortOrder } }: QueryParams) => {
   return (
     <>
       <h1>{sortOrder != null ? sortOrder : 'Users'}</h1>
+
       <UserTables sortOrder={sortOrder} />
     </>
   );
