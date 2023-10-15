@@ -1,3 +1,4 @@
+import Navbar from './Navbar';
 import './globals.css';
 
 export const metadata = {
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="winter">
-      <body>{children}</body>
+      <body className="inter.className">
+        <Navbar />
+        <main className="p-5">{children}</main>
+      </body>
     </html>
   );
 }
